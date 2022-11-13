@@ -1,4 +1,50 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: unset;
+  overflow-x: hidden;
+
+  /* overflow-y: hidden; */
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  /* overflow-x: hidden; */
+  /* outline: 1px solid red; */
+}
+
+:root {
+  /* Primaries */
+  --clr-dark-red: hsl(12, 88%, 59%);
+  --clr-dark-blue: hsl(228, 39%, 23%);
+
+  /* Neutrals */
+  --clr-dark-grayish-blue: hsl(227, 12%, 61%);
+  --clr-very-dark-blue: hsl(233, 12%, 13%);
+  --clr-very-pale-red: hsl(13, 100%, 96%);
+  --clr-very-light-grey: hsl(0, 0%, 98%);
+}
+
 .App {
   text-align: center;
 }
+
+
 
