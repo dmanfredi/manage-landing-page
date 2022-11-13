@@ -1,2 +1,2 @@
-## Repo for Front End Mentor project manage-landing-page.
+### Repo for Front End Mentor project manage-landing-page.
 
