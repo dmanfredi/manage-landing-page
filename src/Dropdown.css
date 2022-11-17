@@ -1,0 +1,36 @@
+.darkening-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 140vh;
+  overflow-x: hidden;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.098),
+    rgba(0, 0, 0, 0.829)
+  );
+}
+
+.menu-container {
+  width: 300px;
+  background-color: white;
+  height: 320px;
+  border-radius: 5px;
+  margin-top: 5.5rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-link {
+  color: var(--clr-dark-blue);
+  font-size: 1rem;
+  font-weight: 500;
+}
