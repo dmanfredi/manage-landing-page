@@ -166,7 +166,7 @@ function App() {
           </div>
         )}
       </header>
-      <div className="intro-container">
+      <section className="intro-container">
         <div className="intro-illustration-container">
           <img
             src={introIllustration}
@@ -176,9 +176,9 @@ function App() {
         </div>
         <div className="intro-content-container">
           <div className="intro-text-container">
-            <div className="intro-header">
+            <header className="intro-header">
               Bring everyone together to build better products.
-            </div>
+            </header>
             <div className="intro-description">
               Manage makes it simple for software teams to plan day-to-day tasks
               while keeping the larger team goals in view.
@@ -193,9 +193,9 @@ function App() {
           </div>
           <button className="get-started-button">Get Started</button>
         </div>
-      </div>
+      </section>
       <div className="section-divider"></div>
-      <div className="second-intro-features-container">
+      <main className="second-intro-features-container">
         <div className="second-intro-text-container">
           <div className="intro-header second-header">
             What’s different about Manage?
@@ -253,9 +253,9 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
       <div className="section-divider"></div>
-      <div className="testimonials-container">
+      <section className="testimonials-container">
         {onDesktop ? (
           <div
             className="fade-out"
@@ -265,7 +265,7 @@ function App() {
             onMouseLeave={() => setTestimonialStyle('testimonial-container')}
           ></div>
         ) : null}
-        <div className="testimonials-header">What they've said</div>
+        <header className="testimonials-header">What they've said</header>
         <div className="all-testimonials">
           {testimonials.map((person, i) => (
             <Testimonial
@@ -278,7 +278,7 @@ function App() {
             ></Testimonial>
           ))}
         </div>
-      </div>
+      </section>
       {onDesktop ? null : (
         <div className="testimonial-indicator-container">
           <div className="testimonial-indicator">
