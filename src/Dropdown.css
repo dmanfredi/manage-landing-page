@@ -1,5 +1,6 @@
 .darkening-wrapper {
   position: absolute;
+  left: 0;
   width: 100%;
   height: 140vh;
   overflow-x: hidden;
@@ -33,4 +34,19 @@
   color: var(--clr-dark-blue);
   font-size: 1rem;
   font-weight: 500;
+}
+
+.slide-in-top {
+  animation: slide-in-top 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

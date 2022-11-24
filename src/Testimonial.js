@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import './Testimonial.css';
 
-const Testimonial = ({ person, text, img, handleTransistion, testimonialStyle }) => {
+const Testimonial = ({
+  person,
+  text,
+  img,
+  handleTransistion,
+  testimonialStyle,
+}) => {
+  const onDesktop = useMediaQuery({ query: '(min-width: 800px)' });
 
-
+  testimonialStyle += onDesktop ? ' slide-around' : '';
 
   return (
     <div

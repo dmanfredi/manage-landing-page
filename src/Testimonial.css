@@ -83,3 +83,20 @@
     opacity: 1;
   }
 }
+
+.slide-around {
+  animation: slide-around 35s linear infinite;
+}
+
+.--pause {
+  animation-play-state: paused;
+}
+
+@keyframes slide-around {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(970px);
+  }
+}

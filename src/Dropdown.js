@@ -6,7 +6,7 @@ const Dropdown = ({ toggleInMenu, inMenu }) => {
 
   return (
     <div className="darkening-wrapper" onClick={() => toggleInMenu(false)}>
-      <div className="menu-container">
+      <div className="menu-container slide-in-top">
         <a href="https://dylanmanfredi.xyz/" className="menu-link">
           Pricing
         </a>

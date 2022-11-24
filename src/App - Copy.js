@@ -8,11 +8,11 @@
 
 import './App.css';
 import logo from './images/logo.svg';
-
+import logoWhite from './images/logoWhite.png';
 import menu from './images/icon-hamburger.svg';
 import menuClose from './images/icon-close.svg';
 import decorationPill from './images/bg-tablet-pattern.svg';
-
+import decorationCurve from './images/bg-simplify-section-mobile.svg';
 import introIllustration from './images/illustration-intro.svg';
 import Testimonial from './Testimonial';
 
@@ -21,10 +21,15 @@ import avatar2 from './images/avatar-anisha.png';
 import avatar3 from './images/avatar-richard.png';
 import avatar4 from './images/avatar-shanai.png';
 
+import instagram from './images/icon-instagram.svg';
+import facebook from './images/icon-facebook.svg';
+import twitter from './images/icon-twitter.svg';
+import youtube from './images/icon-youtube.svg';
+import pinterest from './images/icon-pinterest.svg';
+
 import { useEffect, useState } from 'react';
 import Dropdown from './Dropdown';
 import { useMediaQuery } from 'react-responsive';
-import Footer from './Footer';
 
 let testimonialConfigs = {
   ali: {
@@ -81,20 +86,35 @@ function App() {
     'testimonial-container'
   );
 
-  useEffect(() => {
-    if (onDesktop)
-      setTestimonials([
-        'ali',
-        'anisha',
-        'richard',
-        'shanai',
-        'ali',
-        'anisha',
-        'richard',
-        'shanai',
-      ]);
-    else setTestimonials(['ali']);
-  }, [onDesktop]);
+  // useEffect(() => {
+  //   if (!updater) {
+  //     updater = setInterval(() => {
+  //       if (testimonials.length === 1) {
+  //         setTestimonials(['shanai', ...testimonials]);
+  //       } else {
+  //         testimonials.pop();
+  //         setTestimonials([...testimonials]);
+  //       }
+  //     }, 2000);
+  //   }
+  // }, [testimonials]);
+
+  // useEffect(() => {
+  //   if (!updater) {
+  //     updater = setInterval(() => {
+  //       // let arr = [...testimonials];
+  //       // let val = arr.pop();
+  //       // console.log(val);
+  //       // arr.unshift(val);
+  //       // console.log(arr);
+  //       testimonials.unshift(testimonials.pop());
+  //       setTestimonials([...testimonials]);
+  //       // console.log(testArr);
+  //     }, 1000);
+  //   }
+  // }, [testimonials]);
+
+  // const [style, setStyle] = useState('testimonial-container');
 
   function handleTransistion(styling) {
     setTestimonialStyle(styling);
@@ -256,15 +276,7 @@ function App() {
       </div>
       <div className="section-divider"></div>
       <div className="testimonials-container">
-        {onDesktop ? (
-          <div
-            className="fade-out"
-            onMouseEnter={() =>
-              setTestimonialStyle('testimonial-container --pause')
-            }
-            onMouseLeave={() => setTestimonialStyle('testimonial-container')}
-          ></div>
-        ) : null}
+        {onDesktop ? <div className="fade-out"></div> : null}
         <div className="testimonials-header">What they've said</div>
         <div className="all-testimonials">
           {testimonials.map((person, i) => (
@@ -292,7 +304,86 @@ function App() {
       <div className="get-started-button-container">
         <button className="get-started-button">Get Started</button>
       </div>
-      <Footer></Footer>
+      <div className="closing-statement-container">
+        <div className="closing-statement-content-container">
+          <div className="closing-statement">
+            Simplify how your team works today.
+          </div>
+          <div className="decoration-container-curve">
+            <img
+              src={decorationCurve}
+              alt="Decoration"
+              className="decoration-curve"
+            />
+          </div>
+        </div>
+
+        <button className="get-started-button closing-statement-button">
+          Get Started
+        </button>
+      </div>
+      <footer className="footer-container">
+        <div className="mailing-list-container">
+          <input
+            type="text"
+            placeholder="Updates in your inbox..."
+            className="mailing-list-input"
+          />
+          <button className="mailing-list-button">GO</button>
+        </div>
+        <div className="footer-links-container">
+          <div className="footer-links">
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              Home
+            </a>
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              Pricing
+            </a>
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              Products
+            </a>
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              About Us
+            </a>
+          </div>
+          <div className="footer-links">
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              Careers
+            </a>
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              Community
+            </a>
+            <a href="https://dylanmanfredi.xyz/" className="link">
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+        <div className="socials-container">
+          <a href="https://dylanmanfredi.xyz/" className="social">
+            <img src={facebook} alt="Facebook Page" className="social-img" />
+          </a>
+          <a href="https://dylanmanfredi.xyz/" className="social">
+            <img src={youtube} alt="Youtube Channel" className="social-img" />
+          </a>
+          <a href="https://dylanmanfredi.xyz/" className="social">
+            <img src={twitter} alt="Twitter Page" className="social-img" />
+          </a>
+          <a href="https://dylanmanfredi.xyz/" className="social">
+            <img
+              src={pinterest}
+              alt="Pinterest Profile"
+              className="social-img"
+            />
+          </a>
+          <a href="https://dylanmanfredi.xyz/" className="social">
+            <img src={instagram} alt="Instagram Page" className="social-img" />
+          </a>
+        </div>
+        <div className="logo-container --footer">
+          <img src={logoWhite} alt="Logo" className="logo" />
+        </div>
+        <div className="copyright">Copyright 2022. All Rights Reserved</div>
+      </footer>
     </div>
   );
 }
