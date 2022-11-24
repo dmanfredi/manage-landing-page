@@ -176,9 +176,9 @@ function App() {
         </div>
         <div className="intro-content-container">
           <div className="intro-text-container">
-            <header className="intro-header">
+            <h1 className="intro-header">
               Bring everyone together to build better products.
-            </header>
+            </h1>
             <div className="intro-description">
               Manage makes it simple for software teams to plan day-to-day tasks
               while keeping the larger team goals in view.
