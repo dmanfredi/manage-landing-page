@@ -203,8 +203,11 @@
     max-width: 1140px;
     width: 100%;
 
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 4rem 2rem 3rem 2rem;
+
+    /* padding-left: 2rem;
+    padding-top: 1rem;
+    padding-right: 2rem; */
 
     z-index: 999;
   }
@@ -213,7 +216,7 @@
     display: flex;
     flex-direction: column-reverse;
     text-align: left;
-    height: 200px;
+    height: 180px;
     justify-content: space-between;
   }
 
@@ -240,7 +243,7 @@
     /* padding: 1rem; */
     /* margin-right: -8rem; */
     /* width: 450px; */
-    height: 200px;
+    height: 180px;
   }
 
   .footer-links {
@@ -256,7 +259,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: 180px;
   }
   .mailing-list-container {
     width: unset;
